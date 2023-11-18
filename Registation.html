@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+	<script>
+		function SubForm (){
+			$.ajax({
+				url:"https://api.apispreadsheets.com/data/WGKLnoVAICYkaQGD/",
+				type:"post",
+				data:$("#myForm").serializeArray(),
+				success: function(){
+					alert("Form Data Submitted :)")
+				},
+				error: function(){
+					alert("There was an error :(")
+				}
+			});
+		}
+	</script>
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Mooli&family=Sedgwick+Ave+Display&display=swap"
+      rel="stylesheet"
+    />
+    <title>Registration Form</title>
+    <meta
+      name="viewport"
+      content="width=device-width,
+      initial-scale=1.0"
+    />
+    <!-- <link rel="stylesheet" href="hi.css" /> -->
+  </head>
+  <style>
+    body {
+      font-family: "Dela Gothic One", cursive;
+      font-family: "Mooli", sans-serif;
+      font-family: "Sedgwick Ave Display", cursive;
+    }
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+
+    body {
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+
+    body {
+    background-image: url(image/Home.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+@media screen and(max-width:768px) {
+    body{
+        background-image: url(image/Home.png);
+    }
+    
+}
+    .container {
+      width: 100%;
+      max-width: 650px;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 28px;
+      margin: 0 28px;
+      border-radius: 10px;
+      box-shadow: inset -2px 2px 2px white;
+    }
+
+    .form-title {
+      font-size: 26px;
+      font-weight: 600;
+      text-align: center;
+      padding-bottom: 6px;
+      color: white;
+      text-shadow: 2px 2px 2px black;
+      border-bottom: solid 1px white;
+    }
+
+    .main-user-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 20px 0;
+    }
+
+    .user-input-box:nth-child(2n) {
+      justify-content: end;
+    }
+
+    .user-input-box {
+      display: flex;
+      flex-wrap: wrap;
+      width: 50%;
+      padding-bottom: 15px;
+    }
+
+    .user-input-box label {
+      width: 95%;
+      color: white;
+      font-size: 20px;
+      font-weight: 400;
+      margin: 5px 0;
+    }
+
+    .user-input-box input {
+      height: 40px;
+      width: 95%;
+      border-radius: 7px;
+      outline: none;
+      border: 1px solid grey;
+      padding: 0 10px;
+    }
+
+    .gender-title {
+      color: white;
+      font-size: 24px;
+      font-weight: 600;
+      border-bottom: 1px solid white;
+    }
+
+    .gender-category {
+      margin: 15px 0;
+      color: white;
+    }
+
+    .gender-category label {
+      padding: 0 20px 0 5px;
+    }
+
+    .gender-category label,
+    .gender-category input,
+    .form-submit-btn input {
+      cursor: pointer;
+    }
+
+    .form-submit-btn {
+      margin-top: 40px;
+      width: 100%;
+
+    }
+
+    .form-submit-btn input {
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+      font-size: 20px;
+      padding: 10px;
+      border: none;
+      border-radius: 3px;
+      color: rgb(209, 209, 209);
+      background: rgba(63, 114, 76, 0.7);
+    }
+
+    .form-submit-btn input:hover {
+      background: rgba(56, 204, 93, 0.7);
+      color: rgb(255, 255, 255);
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        min-width: 300px;
+      }
+
+      .user-input-box {
+        margin-bottom: 12px;
+        width: 100%;
+        
+      }
+
+      .user-input-box:nth-child(2n) {
+        justify-content: space-between;
+      }
+
+      .gender-category {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .main-user-info {
+        max-height: 380px;
+        overflow: auto;
+      }
+
+      .main-user-info::-webkit-scrollbar {
+        width: 0;
+      }
+      
+    }
+#car {
+      height: 40px;
+      width: 350px;
+      border-radius: 7px;
+    }
+    .register{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    /* width: 100%; */
+    margin-top: 10px;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    /* color: rgb(209, 209, 209); */
+    /* background: rgba(63, 114, 76, 0.7); */
+  }
+  button{
+      color: white;
+      scale: 2;
+      background-color: lightseagreen;
+      border-radius: 20%;
+    }
+#one1{
+    height: 40px;
+    width: 350px;
+    border-radius: 7px;
+   }
+   @media screen and(max-width:768px) {
+    body{
+        background-image: url(image/background.jpg);
+    }
+    
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+   .navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Kobe", Helvetica, sans-serif;
+    font-weight: 350;
+    text-transform: uppercase;
+    line-height: 100px;
+    color: #6d6458;
+    z-index: 2;
+    
+  }
+  
+  .site-menu {
+    display: flex;
+  }
+  .menu-item {
+    margin-left: 60px;
+    text-decoration: none;
+    color: rgb(245, 240, 240);
+    font-size: 25px;
+    font-weight: bold;
+  } 
+  .menu-item:hover{
+    scale: 1.15;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    color: rgb(99, 197, 197);
+  }
+  </style>
+
+  <body>
+    <div class="navbar">
+      
+      <div class="site-menu">
+      
+        <a href="/you.html" target="_blank" class="menu-item">Home</a>
+        <a href="/Registation.html" target="_blank" class="menu-item">Registration</a>
+        <a href="/competition.html" target="_blank" class="menu-item">Competition</a>
+        <a href="https://ayushh23.github.io/Result/" target="_blank" class="menu-item">Result</a>
+        <!-- <a href="/gec1.html" target="_blank" class="menu-item">Upload Photos</a> -->
+        <a href="/contact (2).html "target="blank" class="menu-item">Contact Us</a>
+      </div>
+    </div>
+    <div class="container">
+      <h1 class="form-title">Registration</h1>
+      <form id="myForm">
+        <div class="main-user-info">
+          <div class="user-input-box">
+            <label for="fullName">Full Name</label>
+            <input
+              type="text"
+              id="fullName"
+              name="fullName"
+              placeholder="Enter Full Name"
+            />
+          </div>
+          <div class="user-input-box">
+            <label for="Registration No.">Registration No.</label>
+            <input
+              type="number"
+              id="Registration No."
+              name="Registration No."
+              placeholder="Registration No."
+            />
+          </div>
+          <div class="user-input-box">
+            <label for="Email">Email</label>
+            <input
+              type="email"
+              id="Email"
+              name="Email"
+              placeholder="Enter Email"
+            />
+          </div>
+          <div class="user-input-box">
+            <label for="phoneNumber">Phone Number</label>
+            <input
+              type="number"
+              id="phoneNumber"
+              name="phoneNumber"
+              placeholder="Enter Phone Number"
+            />
+          </div>
+          <div class="user-input-box">
+            <label for="Year">Year</label>
+            <input type="text" id="Year" name="Year" placeholder="Enter Year" />
+          </div>
+          <div class="user-input-box" id="option">
+            <label for="Competition">Competition</label>
+            <!-- <input type="" id="Competition" name="Competition" placeholder="Enter Competition" /> -->
+            <select name="competition" id="one1">
+              <option value="Web Design"  id="one1">Web Design</option>
+              <option value="Techtainment" id="one1">Techtainment</option>
+              <option value="Techo-debate" id="one1">Techo-debate</option>
+              <option value="App development" id="one1">App development</option>
+              <option value="Tech quiz" id="one1">Tech quiz</option>
+              <option value="Robotic robo race" id="one1">Robotic robo race</option>
+              <option value="Cryptic prastuti" id="one1">Cryptic prastuti</option>
+              <option value="Hackathon" id="one1">Hackathon</option>
+              <option value="Idea presentation" id="one1">Idea presentation</option>
+              <option value="Web mathematics" id="one1">Web mathematics</option>
+              <option value="STEM olympiad" id="one1">STEM olympiad</option>
+              <option value="Code competition" id="one1">Code competition</option>
+              <option value="Nirman competition" id="one1">Nirman competition</option>
+              <option value="Poster Presentation" id="one1">Poster Presentation</option>
+              <option value="Ethical Hacking" id="one1">Ethical Hacking</option>
+              <option value="Mega Structure" id="one1">Mega Structure</option>
+              <option value="Model fiesta" id="one1">Model fiesta</option>
+              <option value="Innovation Exhibition" id="one1">Innovation Exhibition</option>
+              <option value="Anadizx" id="one1">Anadizx</option>
+              <option value="Product Design" id="one1">Product Design</option>
+              <option value="Tech Summit" id="one1">Tech Summit</option>
+              <option value="Digital Painting" id="one1">Digital Painting</option>
+              <option value="Tech Letter" id="one1">Tech Letter</option>
+              <option value="Techi Talk" id="one1">Techi Talk</option>
+            </select>
+          </div>
+          <div class="user-input-box">
+            <label for="Branch">Branch</label>
+            <input
+              type="text"
+              id="Branch"
+              name="Branch"
+              placeholder="Enter Branch"
+            />
+          </div>
+        </div>
+        <div class="gender-details-box">
+          <span class="gender-title">Gender</span>
+          <div class="gender-category">
+            <input type="radio" name="gender" id="male" value="male"/>
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female" value="female"/>
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="other" value="other"/>
+            <label for="other">Other</label>
+          </div>
+        </div>
+        <!-- <div class="form-submit-btn">
+          <input type="submit" value="Register" onclick=SubForm()/>
+        </div> -->
+      </form>
+      <div class="register"><button type="submit" onclick=SubForm()>Register</button></div>
+    </div>
+    
+    </video>
+  </body>
+</html>

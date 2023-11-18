@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Mooli&display=swap" rel="stylesheet">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- <link rel="stylesheet" type="text/css" href="/contact.css">  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+</head>
+
+<style>
+   #contvid {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+    }
+
+    
+
+  @media(max-aspect-ratio:16/9) {
+        .contvid {
+            width: auto;
+            height: auto;
+        }
+    }
+  body{
+    margin-top: 2rem;
+    /* background-image: url("blurred-colorful-wallpaper-background_976742-179.avif");
+    background-repeat: no-repeat;
+    background-size:cover;
+     */
+     color: #f9f9f9;
+     /* background: linear-gradient(to left, #660066 2%, #66ccff 100%) */
+
+}
+body{
+  /* font-family: 'Dela Gothic One', cursive; */
+font-family: 'Mooli', sans-serif;
+font-weight: bold;
+}
+.container
+{
+    width: 100%;
+}
+.col-md-8
+{
+    flex:0 0 50%;
+    width: 20%;
+}
+.col-md-4
+{
+    flex:0 0 50%;
+    max-width: 44%;
+    margin-left: 2rem;
+}
+.Member{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 0.2rem solid #ccffff;
+    border-radius: 15px;
+    padding: 0.7rem;
+    margin: 1rem;
+
+    &:hover{
+        transform: scale(1.05);
+    }
+}
+.form-control{
+    border: 3px solid #0a045f;
+    border-radius: 10px;
+}
+.btn.btn-primary{
+    border: 3px solid #0a045f;
+    border-radius: 10px;
+    
+}
+
+
+#navbar {
+        height: 60px;
+        width: 850px;
+        margin-left: 600px;
+        display: flex;
+        justify-content: space-around;
+        font-family: helvetica,'Exo 2', sans-serif;
+        font-weight: bold;
+        /* border:  2px solid black; */
+        position: fixed;
+        top: 5px;
+        font-size: 25px;
+    }
+
+    .list {
+        color: rgb(244, 226, 226);
+        display: inline-block;
+        font-size: 18px;
+        font-family: 'Mooli', sans-serif;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .list:hover {
+        scale: 1.15;
+        transition-duration: 0.8s;
+        transition-timing-function: cubic-bezier();
+        color: rgb(26, 233, 233);
+
+    }
+    .text-center{
+      font-weight: bold;
+      color: rgb(134, 227, 232);
+    }
+    .container{
+      position: relative;
+      top: 80px;
+      /* border: 2px solid wheat; */
+    }
+
+</style>
+<body>
+  <div id="navbar">
+        
+    <a href="/you.html" target="_blank" class="list">HOME</a>
+    <a href="/Registation.html" target="_blank" class="list">REGISTRATION</a>
+    <a href="/competition.html" target="_blank" class="list">COMPETITION</a>
+    <a href="https://ayushh23.github.io/Result/" target="_blank" class="list">RESULT</a>
+    <!-- <a href="/tut15.html" target="_blank" class="list">UPLOAD PHOTOS</a> -->
+    <a href="/contact (2).html "target="blank" class="list">CONTACT US</a>
+</div>
+
+
+  <video autoplay loop muted plays-inline id="contvid">
+    <source src="image/contactfin.mp4" type="video/mp4">
+
+</video>
+  <div class="container">
+
+    <h3 class="text-center">Contact us</h3><br />
+    
+    <div class="row">
+      <div class="col-md-8">
+          <form action="https://formspree.io/f/mjvqpgok" method="post">
+            <input class="form-control" name="name" placeholder="Name..." /><br />
+            <input class="form-control" name="phone" placeholder="Phone..." /><br />
+            <input class="form-control" name="email" placeholder="E-mail..." /><br />
+            <textarea class="form-control" name="text" placeholder="How can we help you?" style="height:150px;"></textarea><br />
+            <input class="btn btn-primary" type="submit" value="Send" /><br /><br />
+          </form>
+      </div>
+    <div class="col-md-4">
+            <h3 style="text-align: center;">Team Members</h3>
+            <div class="Member">Ayush Raj &nbsp&nbsp<span></span>&nbsp&nbsp&nbsp&nbsp +91 7667804626</div>
+            <div class="Member">Subhajit Sahu <span></span> +91 82605 89320</div>
+            <div class="Member">Kashish Parveen <span></span> +91 9337374757</div>
+            <div class="Member">Vivek Kumar Ray <span></span> +91 7488203762</div>
+      </div>
+    </div>
+    
+    </div>
+</body>
+</html>
