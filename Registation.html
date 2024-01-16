@@ -40,6 +40,14 @@
       font-family: "Dela Gothic One", cursive;
       font-family: "Mooli", sans-serif;
       font-family: "Sedgwick Ave Display", cursive;
+      display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url(image/Home.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     }
     * {
       padding: 0;
@@ -48,20 +56,20 @@
       font-family: sans-serif;
     }
 
-    body {
+    /* body {
       display: flex;
       height: 100vh;
       justify-content: center;
       align-items: center;
-    }
+    } */
 
-    body {
+    /* body {
     background-image: url(image/Home.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 
-}
+} */
 
 @media screen and(max-width:768px) {
     body{
@@ -74,7 +82,7 @@
       max-width: 650px;
       background: rgba(0, 0, 0, 0.5);
       padding: 28px;
-      margin: 0 28px;
+      margin: 0 10px;
       border-radius: 10px;
       box-shadow: inset -2px 2px 2px white;
     }
@@ -171,13 +179,17 @@
 
     @media (max-width: 600px) {
       .container {
-        min-width: 300px;
+        min-width: 250px;
+        margin:0 5px;
       }
 
       .user-input-box {
-        margin-bottom: 12px;
+        /* margin-bottom: 12px; */
         width: 100%;
         
+      }
+      .main-user-info{
+        max-height: 400px;
       }
 
       .user-input-box:nth-child(2n) {

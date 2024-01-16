@@ -9,65 +9,72 @@
    
     body {
         font-family: 'Josefin Sans', sans-serif;
-        height: 700px;
+        /* height: 700px; */
         background-color: #a2b9bc;
     }
    
 
     .container {
         width: 100%;
-        height: 70vh;
+        /* height: 70vh; */
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 0 90px;
+        padding: 0 15px;
+        flex-wrap:wrap;
 
     }
 
     .content-section {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
         text-align: center;
+        flex-wrap:wrap;
+        margin-top: 20px;
     }
 
     .content-section .card {
-        flex: 1;
-        margin: 20px 20px;
+        flex: 1 1 calc(48% -20%);
+        margin: 20px 10px;
         box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
-        margin-top: 350px;
+        /* margin-top: 350px; */
         background-color: white;
         border-radius: 40px 10px;
+        overflow: hidden;
+        transition: transform 0.5s;
     }
 
     .content-section .card img {
-        height: 200px;
+        max-width: 100%;
+        height: auto;
     }
 
     .content-section .card h2 {
         margin: 15px 0px;
-        font-size: 28px;
+        font-size: 24px;
         color: #1662a1;
-        font-family: 'Josefin Sans', sans-serif;
+        /* font-family: 'Josefin Sans', sans-serif; */
     }
 
     .content-section .card p {
-        font-size: 16px;
+        font-size: 14px;
         line-height: 1.5;
         padding: 0 10px;
         margin-bottom: 20px;
-        font-family: 'Josefin Sans', sans-serif;
+        /* font-family: 'Josefin Sans', sans-serif; */
     }
 
     @media screen and (max-width:600px) {
-        .content-section {
-            flex-direction: column;
+        .content-section .card{
+            flex: 1 0 100%;
         }
     }
 
     .card:hover {
-        scale: 1.05;
-        transition-duration: .5s;
+        /* scale: 1.05;
+        transition-duration: .5s; */
+        transform:scale(1.5);
     }
 
     #navbar {
@@ -82,6 +89,7 @@
         position: absolute;
         top: 5px;
         font-size: 25px;;
+        overflow: hidden;
     }
 
     .list {
@@ -92,6 +100,12 @@
         cursor: pointer;
         text-decoration: none;
         font-weight: 700;
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
 
     }
 
@@ -111,6 +125,42 @@
         justify-content: center;
         align-items: center;
     }
+
+
+        /* #navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        } */
+
+        #navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        @media screen and (max-width: 600px) {
+            .content-section .card {
+                flex: 1 0 100%;
+            }
+            /* #navbar {
+                display: flex;
+                flex-direction: column;
+            }
+
+            #navbar a {
+                float: none;
+                 display: flex; 
+                text-align: left;
+            } */
+        }
+        #head {
+            font-size: 40px;
+            text-align: center;
+            margin-top: 20px;
+        }
 </style>
 
 <!DOCTYPE html>
@@ -124,6 +174,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;400&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
 </head>
 
 <body>
@@ -134,9 +186,8 @@
         <a href="/you.html" target="_blank" class="list">HOME</a>
         <a href="/Registation.html" target="_blank" class="list">REGISTRATION</a>
         <a href="/competition.html" target="_blank" class="list">COMPETITION</a>
-        <a href="https://ayushh23.github.io/Result/"target="_blank" class="list">RESULT</a>
-        <!-- <a href="/tut15.html" target="_blank" class="list">UPLOAD PHOTOS</a> -->
-        <a href="/contact (2).html " target="blank" class="list">CONTACT US</a>
+        <a href="https://ayushh23.github.io/Result/" target="_blank" class="list">RESULT</a>
+        <a href="/contact (2).html" target="blank" class="list">CONTACT US</a>
     </div>
 
 
