@@ -4,11 +4,14 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>GANDHI ENGINEERING COLLEGE</title>
+  <link rel="stylesheet" href="responsive.css">
+  
   <link rel="stylesheet" href="Technovation2.0.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-  <style>
+  <!-- <style>
     /* Add your CSS styles here */
     /* Example media query for responsiveness */
     @media (max-width: 768px) {
@@ -189,30 +192,111 @@ body {
   height: 50px;
   margin: 10px;
 }
-  </style>
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  body {
+    height: auto;
+  }
+
+  .navbar {
+    height: auto;
+    padding: 10px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu-item {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+
+  .container {
+    width: 100%;
+    height: 200px;
+  }
+
+  .title {
+    margin-top: 5rem;
+    font-size: 4em;
+  }
+
+  #but {
+    position: static;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  #descrp {
+    position: static;
+    margin-bottom: 20px;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .logo {
+    margin: 5px;
+  }
+}
+
+
+
+/* Add this CSS to style the menu toggle button and hide the menu initially */
+.menu-toggle {
+  display: none; /* Hide by default on larger screens */
+  cursor: pointer;
+  font-size: 20px;
+  padding: 15px;
+}
+
+.site-menu {
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  /* Show menu toggle button and hide menu items initially on smaller screens */
+  .menu-toggle {
+    display: block;
+  }
+
+  .site-menu {
+    display: none; /* Hide by default on smaller screens */
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background-color: #f9f9f9;
+    position: absolute;
+    top: 60px; /* Adjust as needed based on your header height */
+    left: 0;
+  }
+
+  .menu-item {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+   </style> -->
 </head>
 <body>
-  <a href="/Registation.html" target="_blank"><button id="but">Register Now</button></a>
-  <p id="descrp">On 13th Oct & 14th Oct</p>
+  <!-- <a href="/Registation.html" target="_blank"><button id="but">Register Now</button></a>
+  <p id="descrp">On 13th Oct & 14th Oct</p> -->
 
   <div class="navbar">
-     <!-- <div class="site-info">elevated</div> -->
-     <div class="site-menu">
-        <!-- <div class="menu-item">Home</div>
-        <div class="menu-item">Registation</div>
-        <div class="menu-item">Competition</div>
-        <div class="menu-item">Result</div>
-        <div class="menu-item">Upload Vedios</div>
-        <div class="menu-item">Contact Us</div> -->
-        <a href="/you.html" target="_blank" class="menu-item">Home</a>
-        <a href="/Registation.html" target="_blank" class="menu-item">Registration</a>
-        <a href="/competition.html" target="_blank" class="menu-item">Competition</a>
-        <a href="/newresult.html" target="_blank" class="menu-item">Result</a>
-        <!-- <a href="/gec1.html" target="_blank" class="menu-item">Upload Photos</a> -->
-        <a href="/contact (2).html "target="blank" class="menu-item">Contact Us</a>
-    <!-- Add your menu items here -->
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <div class="site-menu" id="myMenu">
+      <a href="/you.html" target="_blank" class="menu-item">Home</a>
+      <a href="/Registation.html" target="_blank" class="menu-item">Registration</a>
+      <a href="/competition.html" target="_blank" class="menu-item">Competition</a>
+      <a href="/newresult.html" target="_blank" class="menu-item">Result</a>
+      <a href="/contact (2).html" target="_blank" class="menu-item">Contact Us</a>
+    </div>
   </div>
-  </div>
+  
 
   <div class="container">
     <div class="block b-1"></div>
@@ -225,14 +309,22 @@ body {
     <!-- Add your content here -->
   </div>
   <div class="overlay"></div>
-  <p class="title">TECHNOVATION 2K23</p>
+  <p class="title">TECHNOVATION 2K24-1.0</p>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js">
 
   </script>
-  <script>
-    // Your JavaScript code here
-    // ...
+  <!-- <script>
+    Your JavaScript code here
+    ...
+    function toggleMenu() {
+  var menu = document.getElementById("myMenu");
+  if (menu.style.display === "flex") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "flex";
+  }
+}
 
     // Wrap every letter in a span
     var textWrapper = document.querySelector(".title");
@@ -294,12 +386,13 @@ body {
       },
       0.1
     );
-  </script>
+  </script> -->
 
   <div class="footer">
     <a href="https://instagram.com"><img src="newinsta.png" alt="Instagram" class="logo"></a>
     <a href="https://youtube.com"><img src="newyoutube.png" alt="YouTube" class="logo"></a>
     <a href="https://facebook.com"><img src="image/facebook.png" alt="Facebook" class="logo"></a>
   </div>
+  <script src="responsive.js"></script>
 </body>
 </html>

@@ -1,4 +1,11 @@
-body {
+@media (max-width: 768px) {
+    /* Add responsive styles here */
+    /* For example, you can modify the layout or font sizes */
+    .title {
+      font-size: 24px;
+    }
+  }
+  body {
   height: 900px;
 
 }
@@ -102,32 +109,56 @@ body {
 }
 
 .b-7 {
-  background: url(image/maxim-hopman-IayKLkmz6g0-unsplash.jpg) 50% 50% no-repeat;
+  background: url(image/download.png) 50% 50% no-repeat;
   background-size: cover;
 }
 
-.overlay {
+/* .overlay {
   position: absolute;
   width: 100%;
   height: 50vh;
-  bottom: -10rem;
-  /* background: #e3dcc7; */
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));
 }
 
 .title {
   margin-top: 20rem;
   text-align: center;
   font-family: "Canopee";
-  font-size: 8em;
+  font-size: 4em;
   color: #1ecfd2;
   overflow: hidden;
+  z-index: 1;
+  position: relative;
 }
+.title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, #1ecfd2, transparent); 
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+  .title::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, transparent, #1ecfd2, transparent); 
+    transform: translateX(-50%);
+    z-index: -1;
+  } */
 
 .title .letter {
   display: inline-block;
   line-height: 1em;
 }
-#but{
+/* #but{
   height: 50px;
   width: 160px;
   color: black;
@@ -143,13 +174,13 @@ body {
   0 0 25px cyan;
 }
 #but:hover{
-  /* scale: 1.05;
-  transition-duration: .30s; */
-  /* background-color: rgb(234, 187, 125); */
+   scale: 1.05;
+  transition-duration: .30s; 
+   background-color: rgb(234, 187, 125); 
   box-shadow: 0 0 5px cyan,
   0 0 25px cyan, 0 0 50px cyan,
   0 0 100px cyan 0 0 200px cyan;
-}
+} */
 #descrp{
 color: antiquewhite;
 position: fixed;
@@ -170,62 +201,96 @@ height: 50px;
 margin: 10px;
 }
 
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+body {
+  height: auto;
+}
 
-/* Basic styling for the navbar */
 .navbar {
-  /* background-color: #333; */
-  color: #fff;
+  height: auto;
+  padding: 10px;
+  flex-direction: column;
+  text-align: center;
+}
+
+.menu-item {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.container {
+  width: 100%;
+  height: 200px;
+}
+
+.title {
+  margin-top: 5rem;
+  font-size: 2.5em;
+}
+.overlay {
+    height: 30vh;
+
+/* #but {
+  position: static;
+  margin-top: 20px;
+  margin-bottom: 20px;
+} */
+
+#descrp {
+  position: static;
+  margin-bottom: 20px;
+}
+
+.footer {
+  flex-direction: column;
+  align-items: center;
   padding: 10px;
 }
 
-/* Styling for the menu icon */
-.menu-icon {
-  font-size: 20px;
-  cursor: pointer;
+.logo {
+  margin: 5px;
+}
 }
 
-/* Styling for the site menu */
+}
+
+.menu-toggle {
+display: block; /* Hide by default on larger screens */
+cursor: pointer;
+font-size: 20px;
+padding: 15px;
+}
+
 .site-menu {
-  display: flex;
-  justify-content: flex-end;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background-color: #f9f9f9;
+    position: absolute;
+    top: 60px; /* Adjust as needed based on your header height */
+    left: 0;
 }
-
-/* Styling for the menu list */
-.menu-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-/* Styling for each menu item */
-.menu-item {
-  margin-right: 15px;
-}
-
-/* Styling for links within menu items */
-.menu-item a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-}
-
-/* Hover effect for menu items */
-.menu-item a:hover {
-  color: #ffcc00;
-}
-
 @media screen and (max-width: 768px) {
-  .site-menu {
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-end; /* Align items to the right */
-  }
+/* Show menu toggle button and hide menu items initially on smaller screens */
+.menu-toggle {
+  display: block;
+}
 
-  .menu-list {
-    margin-top: 10px; /* Add spacing between the menu and the rest of the content */
-  }
+.site-menu {
+  display: none; /* Hide by default on smaller screens */
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  background-color: #f9f9f9;
+  position: absolute;
+  top: 60px; /* Adjust as needed based on your header height */
+  left: 0;
+}
 
-  .menu-item {
-    margin-right: 0;
-  }
+.menu-item {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
 }
